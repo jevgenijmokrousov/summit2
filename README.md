@@ -1,2 +1,2 @@
-*Summit v2*
+#Summit v2
 Vortex Commerce Ltd default theme for Magento 2
