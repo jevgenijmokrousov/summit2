@@ -14,3 +14,8 @@ instead of
 ```
 grunt (clean|exec|less|watch)
 ```
+
+## Vendors
+
+- Normalize v4.1.1 github.com/necolas/normalize.css
+- Lesshat mixins v3.0.2
