@@ -1,0 +1,110 @@
+// Buttons
+// -------
+
+.button{
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    border:0;
+    margin:0;
+    padding:0;
+    outline:0;
+    cursor:pointer;
+    text-overflow:ellipsis;
+    text-decoration:none;
+    color:@button-main-color;
+    background:@bg-main;
+
+
+    &:active{
+        text-decoration:none;
+        outline:0;
+    }
+
+
+    &--active{
+        color:@button-main-color;
+        background:darken(@bg-main, 10%);
+    }
+
+    .no-touch &{
+        &:hover{
+            color:@button-main-color;
+            background:darken(@bg-main, 10%);
+        }
+    }
+}
+
+.button--primary{
+    color:@button-primary-color;
+    background:@button-primary-bg;
+
+    &--active{
+        color:@button-primary-color;
+        background:darken(@button-primary-bg, 10%);
+
+    }
+
+    .no-touch &{
+        &:hover{
+            color:@button-primary-color;
+            background:darken(@button-primary-bg, 10%);
+
+        }
+    }
+
+}
+
+
+.button--secondary{
+    color:@button-secondary-color;
+    background:@button-secondary-bg;
+
+    &--active{
+        color:@button-secondary-color;
+        background:darken(@button-secondary-bg, 10%);
+
+    }
+
+    .no-touch &{
+        &:hover{
+            color:@button-secondary-color;
+            background:darken(@button-secondary-bg, 10%);
+        }
+    }
+
+}
+
+.button--block{
+    // TODO: Box sizing mixin
+    width:100%;
+}
+
+.button--nav{
+
+    // Tablet
+    @media all and (min-width: @breakpoint-tablet){
+
+    }
+
+    // Desktop
+
+    @media all and (min-width: @breakpoint-desktop){
+
+    }
+
+}
+
+
+.button--icon-right{
+
+}
+
+.button--icon-left{
+
+}
+
+
+.button--search{
+
+}
