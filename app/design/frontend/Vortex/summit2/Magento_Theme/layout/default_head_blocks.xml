@@ -9,8 +9,12 @@
     <head>
         <!-- Reset //-->
         <remove src="mage/calendar.css" />
-        <remove src="mage/calendar.js" />
         <!-- Add css //-->
         <css src="css/main.css" />
     </head>
+    <body>
+        <referenceContainer name="after.body.start">
+            <remove name="head.components" />
+        </referenceContainer>
+    </body>
 </page>
