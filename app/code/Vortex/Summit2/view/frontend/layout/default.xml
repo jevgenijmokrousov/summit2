@@ -2,7 +2,11 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <body>
-        <remove name="require.js" />
+        <remove src="requirejs/require.js" />
+        <remove src="mage/calendar.css" />
+
+        <referenceBlock name="require.js" remove="true"/>
+
         <referenceBlock name="head.components">
             <referenceBlock name="checkout_page_head_components" remove="true"/>
         </referenceBlock>
@@ -12,12 +16,18 @@
             <referenceBlock name="translate" remove="true"/>
             <referenceBlock name="js_cookies" remove="true"/>
             <referenceBlock name="global_notices" remove="true"/>
+            <referenceBlock name="head.components" remove="true"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <referenceBlock name="formkey" remove="true"/>
+            <referenceBlock name="html_calendar" remove="true"/>
         </referenceContainer>
         <referenceContainer name="main.content">
             <referenceBlock name="skip_to_content.target" remove="true"/>
         </referenceContainer>
         <referenceContainer name="header-wrapper">
             <referenceBlock name="minicart" remove="true"/>
+            <referenceBlock name="top.search" remove="true"/>
         </referenceContainer>
         <referenceContainer name="header.container">
             <referenceBlock name="skip_to_content" remove="true"/>
@@ -34,14 +44,15 @@
             <referenceBlock name="ajax.message.placeholder" remove="true"/>
             <referenceBlock name="messages" remove="true"/>
         </referenceContainer>
+        <referenceContainer name="footer">
+            <referenceBlock name="form.subscribe" remove="true"/>
+        </referenceContainer>
         <referenceContainer name="footer-container">
             <referenceBlock name="store_switcher" remove="true"/>
             <referenceBlock name="footer_links" remove="true"/>
             <referenceBlock name="copyright" remove="true"/>
             <referenceBlock name="report.bugs" remove="true"/>
-        </referenceContainer>
-        <referenceContainer name="content">
-            <referenceBlock name="formkey" remove="true"/>
+            <referenceBlock name="report.bugs" remove="true"/>
         </referenceContainer>
     </body>
 </page>
