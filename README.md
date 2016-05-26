@@ -15,7 +15,8 @@ instead of
 grunt (clean|exec|less|watch)
 ```
 
-## Vendors
+## Less vendors in theme Vortex/summit2
 
 - Normalize v4.1.1 github.com/necolas/normalize.css
-- Lesshat mixins v3.0.2
+- Lesshat mixins v3.0.2 lesshat.com
+- Less grid system v0.0.1 goodpixels.co.uk/less-grid-system
