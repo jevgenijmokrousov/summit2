@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="style-guide" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="styleguide" template="Vortex_Summit2::html/style-guide.phtml"/>
+
+            <!--
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">style-guide.phtml</argument>
+            </action>
+            //-->
+
+        </referenceContainer>
+    </body>
+</page>
