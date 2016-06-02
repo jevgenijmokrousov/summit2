@@ -1,33 +1,62 @@
-
 // Summit v2 less variables
-// -------------------
+// ------------------------
 
-@color-main         : #000;
-@color-primary      : lighten(@color-main, 10%);
-@color-secondary    : lighten(@color-main, 20%);
+// Colours
 
-@bg-main        : #E0E0E0;
-@bg-primary     : lighten(@bg-main, 10%);
-@bg-secondary   : lighten(@bg-main, 20%);
+@color-main                     : rgba(0,0,0,.54);
+@color-primary                  : #fff;
+@color-secondary                : rgba(0,0,0,.87);
 
-@breakpoint-tablet          : 768px;
-@breakpoint-desktop         : 1024px;
-@breakpoint-large-desktop   : 1200px;
+@bg-main                        : #626262;
+@bg-primary                     : #50AA3A;
+@bg-secondary                   : #FDDD6C;
 
-@grid-breakpoint    : 480px;
-@grid-column-count  : 12;
-@grid-gutter        : 20;
-@grid-column        : 80;
+// Indents
 
-@button-main-color      : @color-main;
-@button-main-bg         : @bg-main;
+@padding-main-mobile            : 10px;
+@padding-main-tablet            : 15px;
+@padding-main-desktop           : 20px;
+@padding-main-large-desktop     : 30px;
 
-@button-primary-color   : @color-primary;
-@button-primary-bg      : @bg-primary;
+@margin-main-mobile             : @padding-main-mobile;
+@margin-main-tablet             : @padding-main-tablet;
+@margin-main-desktop            : @padding-main-desktop;
+@margin-main-large-desktop      : @padding-main-large-desktop;
 
 
-@button-secondary-color : @color-secondary;
-@button-secondary-bg    : @bg-secondary;
+// Breakpoints
 
-@header-mobile-height: 70px;
+@breakpoint-mobile-max          : 480px;
+@breakpoint-tablet-min          : @breakpoint-mobile-max + 1;
+@breakpoint-tablet-max          : 768px;
+@breakpoint-desktop-min         : @breakpoint-tablet-max + 1;
+@breakpoint-desktop             : 1024px;
+@breakpoint-desktop-max         : 1200px;
+@breakpoint-large-desktop       : @breakpoint-desktop-max + 1;
+
+// Grid
+
+@grid-breakpoint                : 480px;
+@grid-column-count              : 12;
+@grid-gutter                    : 20;
+@grid-column                    : 80;
+
+// Buttons
+
+@button-main-color              : @color-primary;
+@button-main-bg                 : @bg-main;
+
+@button-primary-color           : @color-primary;
+@button-primary-bg              : @bg-primary;
+
+@button-secondary-color         : @color-secondary;
+@button-secondary-bg            : @bg-secondary;
+
+@button-default-icon-width      : 16px;
+@button-large-icon-width        : 24px;
+@button-small-icon-width        : 8px;
+
+// Header
+
+@header-mobile-height           : 70px;
 

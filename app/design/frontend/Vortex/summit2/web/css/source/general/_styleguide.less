@@ -2,23 +2,23 @@
 // -----------
 
 
-// Test grid
+// Guide test grids
+// ---------
 
 @guide-grid-gutter      : 20;
 @guide-grid-breakpoint  : 480px;
 
-#grid2 { #dynamicGrid(2, 200px, @guide-grid-gutter, @guide-grid-breakpoint); }
-#grid3 { #dynamicGrid(3, 200px, @guide-grid-gutter, @guide-grid-breakpoint); }
-#grid6 { #dynamicGrid(6, 200px, @guide-grid-gutter, @guide-grid-breakpoint); }
-
-
+#grid2  { #dynamicGrid(2, 200px, @guide-grid-gutter, @guide-grid-breakpoint); }
+#grid3  { #dynamicGrid(3, 200px, @guide-grid-gutter, @guide-grid-breakpoint); }
+#grid6  { #dynamicGrid(6, 100px, @guide-grid-gutter, @guide-grid-breakpoint); }
+#grid12 { #dynamicGrid(12, 80px, @guide-grid-gutter, @guide-grid-breakpoint); }
 
 .guide-grid{
-    #grid2 > .container;
-    width:100%;
+    .clearfix();
+    width:auto;
 
     &__column{
-        #grid2 > .column(1, true, false);
+        #grid2 > .column;
         background:rgba(0,255,0,.1);
         height:300px;
         margin-bottom:20px;
@@ -30,7 +30,7 @@
     .guide-grid{
 
         &__column{
-            #grid3 > .column(1, true, false);
+            #grid3 > .column;
         }
 
     }
@@ -70,15 +70,42 @@
     }
 }
 
+@media all and (min-width:1024px){
+    .guide-grid{
+        &__column:nth-child(6n){
+            margin-right:0;
+        }
+    }
+}
 
-// Guide
+
+.guide-grid-sidebar{
+
+    &__column{
+        background:rgba(0,255,0,.1);
+        height:300px;
+
+        &--left{
+            #grid12 > .column(8);
+        }
+
+        &--right{
+            #grid12 > .column(4);
+        }
+    }
+}
+
+
+// Guide section
+// -------------
 
 .guide-section{
     padding:20px;
+    margin:0;
 
 
     &__title{
-        font: 500 2em/1.4 "Helvetica", Arial, sans-serif;
+        font: 600 2em/1.4 "Helvetica", Arial, sans-serif;
         color:rgba(0,0,0,.87);
         margin:0;
         padding:0;
@@ -86,7 +113,7 @@
     }
 
     &__subtitle{
-        font: 500 1.5em/1.4 "Helvetica", Arial, sans-serif;
+        font: 400 1.5em/1.4 "Helvetica", Arial, sans-serif;
         color:rgba(0,0,0,.54);
         margin:0;
         padding:0;
@@ -94,7 +121,35 @@
 
 
     &__content{
+        .clearfix();
         margin-top:20px;
+    }
+
+}
+
+// Guide buttons
+// -------------
+
+.guide-button{
+    display:inline-block;
+    vertical-align:top;
+    margin-right:20px;
+
+    &__label{
+        display:block;
+        font: 500 1em/1.2 "Helvetica", Arial, sans-serif;
+        color:rgba(0,0,0,.54);
+        margin:0 0 5px 0;
+    }
+
+    &__container{
+        display:block;
+    }
+
+    // Large
+
+    &--wide{
+        width:300px;
     }
 }
 
