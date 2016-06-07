@@ -1,0 +1,29 @@
+// Forms
+// ----
+
+.form{
+
+}
+
+.form--main{
+
+    fieldset{
+        margin:0;
+        padding:0;
+        border:0;
+    }
+
+    .form__input{
+        .old-clearfix;
+        width:100%;
+
+        input,
+        textarea{
+            .box-sizing(border-box);
+            display:block;
+            width:100%;
+            border:1px solid @form-default-input-border;
+            color:@color-main;
+        }
+    }
+}
